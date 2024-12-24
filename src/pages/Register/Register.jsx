@@ -3,6 +3,7 @@ import registerLottieData from '../../assets/lottie/register.json';
 import Lottie from 'lottie-react';
 import AuthContext from '../../context/AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import SocialLogin from '../Home/shared/SocialLogin';
 
 const Register = () => {
     
@@ -85,7 +86,8 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
-                            
+                            <div className="divider">OR</div>
+                            <SocialLogin></SocialLogin>
                         </form>
                         {/* {
                             errorMessage && <p className='text-red-700'>{errorMessage}</p>
