@@ -85,6 +85,7 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
+                            
                         </form>
                         {/* {
                             errorMessage && <p className='text-red-700'>{errorMessage}</p>
