@@ -19,7 +19,15 @@ const Navbar = () => {
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink> Services</NavLink></li>
+        <li><NavLink>Services</NavLink></li>
+        
+        {
+            user && <>
+                <li><NavLink to="/addService">Add Service</NavLink></li>
+                {/* <li><NavLink to="/myfavorite">My Favorites</NavLink></li>
+                <li><NavLink to="/profile">Profile</NavLink></li> */}
+            </>
+        }
     </>
     return (
         <div className='max-w-7xl mx-auto'>

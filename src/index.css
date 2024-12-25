@@ -8,3 +8,7 @@
 .inter {
   font-family: "Inter", sans-serif;
 }
+
+.input:has(> input[disabled]), .input-disabled, .input:disabled, .input[disabled] {
+  border-color: oklch(0.9 0 0);
+}

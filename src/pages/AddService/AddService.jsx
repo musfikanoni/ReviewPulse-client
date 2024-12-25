@@ -1,0 +1,119 @@
+import React, { useContext, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import AuthContext from '../../context/AuthContext/AuthContext';
+
+const AddService = () => {
+    const {user} = useContext(AuthContext);
+    const [startDate, setStartDate] = useState(new Date());
+
+    const handleAddService = e => {
+        e.preventDefault();
+        const formData = new FormData(e.target)
+        const initialData = Object.fromEntries(formData.entries());
+        console.log(initialData);
+
+    }
+    return (
+        <div className='flex justify-center'>
+             <div className="card bg-base-100 w-full max-w-3xl shrink-0 shadow-2xl">
+                <form onSubmit={handleAddService} className="card-body">
+                    <h2 className='text-3xl font-bold text-center'>Add Service</h2>
+                    {/* Service Image */}
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Service Image</span>
+                        </label>
+                        <input type="text" name='photoUrl' placeholder="Service Image URL" className="input input-bordered" required />
+                    </div>
+                    {/* Service Title */}
+                    <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Service Title</span>
+                            </label>
+                            <input type="text" name='title' placeholder="Service Title" className="input input-bordered" required />
+                    </div>
+                    <div className="grid grid-cols-1 items-end md:grid-cols-2  lg:grid-cols-2 gap-x-3">
+                        {/* Company Name */}
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Company Name</span>
+                            </label>
+                            <input type="text" name='companyName' placeholder="Company Name" className="input input-bordered" required />
+                        </div>
+                        {/* Website */}
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Website</span>
+                            </label>
+                            <input type="text" name='website' placeholder="Website" className="input input-bordered" required />
+                        </div>
+                    </div>
+
+                    {/* Description */}
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Description</span>
+                        </label>
+                        <textarea name='description' className="textarea textarea-bordered" placeholder="Description"></textarea>
+                    </div>
+                    {/* category */}
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Category</span>
+                        </label>
+                        <select name='category' className="select select-bordered w-full max-w-4xl">
+                        <option disabled selected>Select a Category</option>
+                            <option>Hospitality & Travel</option>
+                            <option>E-commerce & Delivery</option>
+                            <option>Professional Consultation</option>
+                            <option>Technology & Digital</option>
+                        </select>
+                    </div>
+                    {/* Price */}
+                    <div className='grid grid-cols-1 items-end md:grid-cols-2  lg:grid-cols-2 gap-x-3'>
+                        <div className="form-control mt-2">
+                            <label className="label">
+                                <span className="label-text">Price</span>
+                            </label>
+                            <input type="text" name='price' placeholder="Price" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control mt-2">
+                            <select name='currency' className="select select-bordered w-full max-w-4xl">
+                                <option disabled selected>Currency</option>
+                                <option>BDT</option>
+                                <option>USD</option>
+                                <option>INR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 items-end md:grid-cols-2  lg:grid-cols-2 gap-x-3">
+                        {/* Date */}
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Added date</span>
+                            </label>
+                            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)}  dateFormat="dd/MM/yyyy"
+                            placeholderText="Select a date" placeholder="Date" name='date' 
+                            className='lg:w-[346px] md:w-[345px] w-[325px] max-w-sm outline-gray-300 border border-gray-300 py-[11px] px-2.5 rounded-md'/>
+                        </div>
+                        {/* user Email */}
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">User Email</span>
+                            </label>
+                            <input type="email" name='email' defaultValue={user.email} placeholder="Price"
+                            className="input input-bordered" />
+                        </div>
+                    </div>
+                        
+                    <div className="form-control mt-6">
+                    <button className="btn btn-primary">Add Service</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
+};
+
+export default AddService;
