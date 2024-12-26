@@ -23,7 +23,7 @@ import AllServices from "../pages/Home/AllServices";
         {
           path: 'services',
           element: <AllServices></AllServices>,
-          loader: () => fetch('http://localhost:5000/addService'),
+          loader: () => fetch('https://assignment-11-server-eta-jade.vercel.app/addService'),
         },
         {
           path: 'addService',
