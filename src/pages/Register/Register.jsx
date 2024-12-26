@@ -4,6 +4,7 @@ import Lottie from 'lottie-react';
 import AuthContext from '../../context/AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import SocialLogin from '../Home/shared/SocialLogin';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     
@@ -21,6 +22,18 @@ const Register = () => {
         const photoUrl = form.photoUrl.value;
         const password = form.password.value;
         console.log(name, email, photoUrl, password);
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+            });
 
 
         //password Validation
@@ -46,6 +59,14 @@ const Register = () => {
         })
         .then(error => {
             console.log('error', error);
+            e.target.reset();
+
+            Toast.fire({
+                icon: "success",
+                title: "Successfully Registered"
+              });
+
+            navigate('/');
         })
 
     }

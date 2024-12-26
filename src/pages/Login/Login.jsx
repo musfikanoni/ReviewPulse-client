@@ -3,12 +3,25 @@ import loginLottieData from '../../assets/lottie/login.json'
 import Lottie from 'lottie-react';
 import AuthContext from '../../context/AuthContext/AuthContext';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const navigate = useNavigate();
     const { logInUser } = useContext(AuthContext);
     const location = useLocation();
     console.log('In login', location);
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -21,6 +34,12 @@ const Login = () => {
         .then(result => {
             console.log('login', result.user);
             e.target.reset();
+
+            Toast.fire({
+                icon: "success",
+                title: "Login successfully"
+              });
+
             navigate('/');
         })
         .catch(error => {
@@ -36,7 +55,7 @@ const Login = () => {
                         <Lottie animationData={loginLottieData}></Lottie>
                     </div>
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <h1 className="text-5xl ml-2 mt-4 font-bold text-center">Login now!</h1>
+                    <h1 className="text-5xl ml-2 mt-4 font-bold text-center">Welcome Back!</h1>
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                         <label className="label">

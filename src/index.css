@@ -12,3 +12,12 @@
 .input:has(> input[disabled]), .input-disabled, .input:disabled, .input[disabled] {
   border-color: oklch(0.9 0 0);
 }
+
+/* nav menu */
+@media (hover:hover) {
+  .menu li > *:not(ul, .menu-title, details, .btn):active,
+  .menu li > *:not(ul, .menu-title, details, .btn).active,
+  .menu li > details > summary:active {
+        color: oklch(1 0 0);
+    }
+  }

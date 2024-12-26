@@ -19,7 +19,7 @@ const Navbar = () => {
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink>Services</NavLink></li>
+        <li><NavLink to="/services">Services</NavLink></li>
         
         {
             user && <>
@@ -31,7 +31,7 @@ const Navbar = () => {
     </>
     return (
         <div className='max-w-7xl mx-auto'>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 py-4 pb-11">
                 <div className="navbar-start">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -61,7 +61,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu gap-3 font-medium menu-horizontal px-1">
                         {links}
                     </ul>
                 </div>
