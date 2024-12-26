@@ -15,7 +15,7 @@ const AllServices = () => {
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <h1 className='font-bold text-3xl text-center my-8'>Our All Services</h1>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto pt-5 pb-24">
                 <div className='gap-y-10 gap-x-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
                         services.map(service => <ServiceCard

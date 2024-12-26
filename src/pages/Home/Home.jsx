@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from './Banner';
 import { Helmet } from 'react-helmet';
+import { Outlet } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <Banner></Banner>
+            <Outlet></Outlet>
         </div>
     );
 };

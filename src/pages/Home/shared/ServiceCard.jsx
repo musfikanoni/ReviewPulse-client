@@ -1,8 +1,11 @@
 import React from 'react';
+import { GiMoneyStack } from 'react-icons/gi';
+import { TbCategory } from 'react-icons/tb';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({service}) => {
 
-    const {photoUrl, title, description, category, price} = service;
+    const {_id, photoUrl, title, description, category, price} = service;
 
     return (
         <div>
@@ -14,11 +17,19 @@ const ServiceCard = ({service}) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
-                    <p>{description}</p>
-                    <p>{category}</p>
-                    <p>{price.price} {price.currency}</p>
+                    <p className='text-gray-500 text-justify font-medium'><span className='font-bold text-md text-slate-700'>Description:</span> {description}</p>
+                    <div className="flex items-center gap-2">
+                        <TbCategory className='text-xl' />
+                        <p className='font-bold text-md text-slate-700'>{category}</p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                        <GiMoneyStack className="text-xl" />
+                        <p className='font-bold text-md text-slate-500'>{price.price} {price.currency}</p>
+                    </div>
                     <div className="card-actions justify-center">
-                    <button className="btn font-semibold text-lg text-white rounded-xl btn-primary">See Details</button>
+                        <Link to={`/services/${_id}`}>
+                            <button className="btn font-semibold text-lg text-white rounded-xl btn-primary">See Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>

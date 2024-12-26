@@ -18,6 +18,9 @@
   .menu li > *:not(ul, .menu-title, details, .btn):active,
   .menu li > *:not(ul, .menu-title, details, .btn).active,
   .menu li > details > summary:active {
+        --tw-bg-opacity: 1;
+        background-color: oklch(0.5 0.16 248.45);
+        --tw-text-opacity: 1;
         color: oklch(1 0 0);
     }
   }
