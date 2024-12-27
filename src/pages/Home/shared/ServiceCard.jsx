@@ -9,7 +9,7 @@ const ServiceCard = ({service}) => {
 
     return (
         <div>
-            <div className="card card-compact bg-base-100 w-96 shadow-xl border border-b-0">
+            <div className="card card-compact bg-base-100 lg:w-96 md:w-[340px] w-[340px] mx-auto shadow-xl border border-b-0">
                 <figure className='pt-4 px-4'>
                     <img className='rounded-xl'
                     src={photoUrl}

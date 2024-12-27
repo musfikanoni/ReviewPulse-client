@@ -24,8 +24,8 @@ const Navbar = () => {
         {
             user && <>
                 <li><NavLink to="/addService">Add Service</NavLink></li>
-                {/* <li><NavLink to="/myfavorite">My Favorites</NavLink></li>
-                <li><NavLink to="/profile">Profile</NavLink></li> */}
+                <li><NavLink to="/myServices">My Services</NavLink></li>
+                <li><NavLink to="/myReviews">My Reviews</NavLink></li>
             </>
         }
     </>
@@ -69,7 +69,23 @@ const Navbar = () => {
 
                     {
                         user ? <>
-                            <button onClick={handleLogOut} className='btn'>Log Out</button>
+                            <div className="flex gap-5 items-center">
+                                <div className="group">
+                                    <Link>
+                                    {
+                                        user.photoURL ? (
+                                            <img src={user.photoURL} alt="" className='w-10 h-10 rounded-full cursor-pointer' />
+                                        ) : (
+                                            <FaRegCircleUser className='text-3xl text-gray-700 cursor-pointer' />
+                                        )
+                                    }
+                                    </Link>
+                                    <div className='absolute right-32 mt-2 w-40 bg-white text-gray-600 text-sm rounded-lg p-2 hidden group-hover:block'>
+                                        {user.displayName || 'User'}
+                                    </div>
+                                </div>
+                                <button onClick={handleLogOut} className='btn'>Log Out</button>
+                            </div>
                         </> : <>
                             <Link to="/login">
                                 <button className='btn'>Login</button>

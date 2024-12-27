@@ -11,12 +11,16 @@ import PrivateRoute from "./PrivateRoute";
 import AllServices from "../pages/Home/AllServices";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import FeaturedServices from "../pages/Home/FeaturedServices";
+import MyServices from "../pages/MyServices/MyServices";
+import MyReviews from "../pages/MyReviews/MyReviews";
+import Error from "../pages/Error/Error"
+// import MeetPartners from "../pages/Home/MeetPartners";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
-      errorElement: <h2>Route not found</h2>,
+      errorElement: <Error></Error>,
       children: [
         {
             path: '/',
@@ -42,6 +46,14 @@ import FeaturedServices from "../pages/Home/FeaturedServices";
         {
           path: 'addService',
           element: <PrivateRoute><AddService></AddService></PrivateRoute>
+        },
+        {
+          path: 'myServices',
+          element: <PrivateRoute><MyServices></MyServices></PrivateRoute>
+        },
+        {
+          path: 'myReviews',
+          element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
         },
         {
           path: 'register',

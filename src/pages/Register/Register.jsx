@@ -12,16 +12,30 @@ const Register = () => {
     const [success, setSuccess] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const handleReegister = (e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
-        const photoUrl = form.photoUrl.value;
+        const photoUrl = form.photo.value;
         const password = form.password.value;
         console.log(name, email, photoUrl, password);
+        const user = {email, password}
+        
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
 
         const Toast = Swal.mixin({
             toast: true,
@@ -60,7 +74,7 @@ const Register = () => {
         .then(error => {
             console.log('error', error);
             e.target.reset();
-
+            updateUserProfile({displayName: name, photoURL:photoUrl})
             Toast.fire({
                 icon: "success",
                 title: "Successfully Registered"
@@ -96,7 +110,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" name='photoUrl' placeholder="Photo URL" className="input input-bordered" required />
+                                <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">

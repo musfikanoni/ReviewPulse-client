@@ -41,7 +41,7 @@ const AddService = () => {
 
     }
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center pt-5 pb-20'>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Add Service - ReviewPulse service Website</title>
