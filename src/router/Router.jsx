@@ -53,7 +53,8 @@ import Error from "../pages/Error/Error"
         },
         {
           path: 'myReviews',
-          element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
+          element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>,
+          // loader: ({params}) => fetch(`https://assignment-11-server-eta-jade.vercel.app/services/${params.id}`),
         },
         {
           path: 'register',

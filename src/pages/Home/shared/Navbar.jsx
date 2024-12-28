@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../assets/site-logo.png'
 import AuthContext from '../../../context/AuthContext/AuthContext';
+import { FaRegCircleUser } from 'react-icons/fa6';
 
 const Navbar = () => {
 

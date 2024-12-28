@@ -25,7 +25,7 @@ const Register = () => {
         const user = {email, password}
         
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://assignment-11-server-eta-jade.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

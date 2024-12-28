@@ -18,7 +18,7 @@ const AddService = () => {
         newService.price = {price, currency};
         console.log(newService);
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://assignment-11-server-eta-jade.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

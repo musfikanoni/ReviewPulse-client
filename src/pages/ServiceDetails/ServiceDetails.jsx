@@ -1,19 +1,70 @@
 import React, { useContext, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { Helmet } from 'react-helmet';
-import { useLoaderData } from 'react-router-dom';
-import AuthContext from '../../context/AuthContext/AuthContext';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+// import AuthContext from '../../context/AuthContext/AuthContext';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
+import Swal from 'sweetalert2';
+import useAuth from '../../hooks/useAuth';
 
 
 const ServiceDetails = () => {
-    const {user} = useContext(AuthContext);
+    
+    const navigate = useNavigate();
+    // const {user} = useContext(AuthContext);
+    const {user} = useAuth();
     const [startDate, setStartDate] = useState(new Date());
     const service = useLoaderData();
     const {photoUrl, title, description, category, price, companyName, website} = service;
 
-    const [rating, setRating] = useState(0)
+    const [rating, setRating] = useState(0);
+
+    const handleAddReview = e => {
+        e.preventDefault();
+        // const formData = new FormData(e.target);
+        // const initialData = Object.fromEntries(formData.entries());
+        // initialData.rating = rating;
+        const form = e.target;
+        const review = form.review.value;
+        const date = form.date.value;
+        const email = form.date.value;
+        const rating = form.rating.value;
+
+        const reviewPost = {
+            review_id: id, 
+            posted_email: user.email,
+            name: user.displayName,
+            title,
+            initialData
+
+        }
+
+        fetch('https://assignment-11-server-eta-jade.vercel.app/reviews',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(reviewPost)
+        }
+        )
+        .then(res => res.json())
+        .then(data => {
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Your service added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                    })
+                navigate('/myReviews')
+            }
+        })
+    }
+
+
+
+
     return (
         <div className='max-w-7xl mx-auto pt-5 pb-24'>
             <Helmet>
@@ -36,13 +87,13 @@ const ServiceDetails = () => {
                     </div>
                 </div>
                 <div className="rounded-xl border mt-7 lg:mt-0 lg:w-9/12 w-full max-w-3xl">
-                    <form className="card-body">
+                    <form onSubmit={handleAddReview} className="card-body">
                         <h3 className='font-bold text-lg'>Add Your Review</h3>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-semibold text-lg">Post Review</span>
                             </label>
-                            <textarea className="textarea textarea-bordered" placeholder="Review write here"></textarea>
+                            <textarea name='review' type="text" className="textarea textarea-bordered" placeholder="Review write here"></textarea>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                             <div className="form-control">
@@ -61,8 +112,14 @@ const ServiceDetails = () => {
                                 className="input input-bordered" />
                             </div>
                         </div>
-                        <div className='flex items-center gap-2'>
-                            <span className='label-text font-semibold text-lg'>Rating:</span> <Rating style={{ maxWidth: 250 }} value={rating} onChange={setRating} />
+                        <div className='flex items-center gap-1'>
+                            <span className=' font-semibold text-lg'>Rating:</span>
+                            <label className='label-text'>
+                                <Rating className='h-8' style={{ maxWidth: 200 }} value={rating} onChange={setRating} />
+
+                            </label>
+                            <input type="hidden" name="rating" value={rating} />
+                            {/* <input type="hidden" name="name" defaultValue={service.title}/> */}
                         </div>
                         <div className="form-control mt-6">
                         <button className="btn btn-primary">Add Review</button>
