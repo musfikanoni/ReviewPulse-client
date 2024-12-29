@@ -49,7 +49,8 @@ import Error from "../pages/Error/Error"
         },
         {
           path: 'myServices',
-          element: <PrivateRoute><MyServices></MyServices></PrivateRoute>
+          element: <PrivateRoute><MyServices></MyServices></PrivateRoute>,
+          // loader: ()
         },
         {
           path: 'myReviews',
