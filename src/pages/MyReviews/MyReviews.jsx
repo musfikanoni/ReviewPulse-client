@@ -44,12 +44,12 @@ const MyReviews = () => {
                         <td>
                             <div className="flex items-center gap-3">
                                 <div className="avatar">
-                                    <div className="mask mask-squircle h-12 w-12">
-                                        <img
-                                        src={user?.photoURL} />
+                                        <div className="mask mask-squircle h-12 w-12">
+                                            <img
+                                            src={user?.photoURL} />
+                                        </div>
                                     </div>
-                                    </div>
-                                    <div>
+                                <div>
                                     <div className="font-bold">{user.displayName}</div>
                             
                                 </div>
