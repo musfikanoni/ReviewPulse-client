@@ -17,21 +17,22 @@ const AddReview = ({service}) => {
 
     const handleAddReview = e => {
         e.preventDefault();
-        // const formData = new FormData(e.target);
-        // const initialData = Object.fromEntries(formData.entries());
-        // initialData.rating = rating;
+        const formData = new FormData(e.target);
+        const initialData = Object.fromEntries(formData.entries());
+        initialData.rating = rating;
         const form = e.target;
         const review = form.review.value;
         // const date = form.date.value;
         // const email = form.date.value;
-        const rating = form.rating.value;
+        // const rating = form.rating.value;
 
         const reviewPost = {
             review_id: id, 
             posted_email: user.email,
             name: user.displayName,
             review,
-            rating
+            rating,
+            title
             // initialData
         }
 
@@ -52,6 +53,7 @@ const AddReview = ({service}) => {
                     icon: 'success',
                     confirmButtonText: 'Cool'
                     })
+                    console.log(review.title)
                 navigate('/myReviews')
             }
         })
@@ -99,7 +101,6 @@ const AddReview = ({service}) => {
 
                     </label>
                     <input type="hidden" name="rating" value={rating} />
-                    {/* <input type="hidden" name="name" defaultValue={service.title}/> */}
                 </div>
                 <div className="form-control mt-6">
                 <button className="btn btn-primary">Add Review</button>
