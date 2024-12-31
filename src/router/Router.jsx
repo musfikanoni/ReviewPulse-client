@@ -29,7 +29,7 @@ import Error from "../pages/Error/Error"
               {
                 path: "/",
                 element: <FeaturedServices></FeaturedServices>,
-                loader: () => fetch('http://localhost:5000/'),
+                loader: () => fetch('https://assignment-11-server-eta-jade.vercel.app/'),
               }
             ]
         },
