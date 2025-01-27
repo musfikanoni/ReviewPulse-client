@@ -9,10 +9,26 @@ import Swal from 'sweetalert2';
 const Register = () => {
     
     const navigate = useNavigate();
-    const [success, setSuccess] = useState(false);
-    const [errorMessage, setErrorMessage] = useState('');
+    const [password, setPassword] = useState("");
+    const [passwordErrors, setPasswordErrors] = useState([]);
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
+
+    const validatePassword = (password) => {
+        const errors = [];
+        if (password.length < 6) errors.push("Password must be at least 6 characters long.");
+        if (!/[A-Z]/.test(password)) errors.push("Password must contain at least one uppercase letter.");
+        if (!/[a-z]/.test(password)) errors.push("Password must contain at least one lowercase letter.");
+        if (!/\d/.test(password)) errors.push("Password must contain at least one number.");
+        if (!/[@$!%*?&]/.test(password)) errors.push("Password must contain at least one special character.");
+        return errors;
+      };
+    
+      const handlePasswordChange = (e) => {
+        const newPassword = e.target.value;
+        setPassword(newPassword);
+        setPasswordErrors(validatePassword(newPassword));
+      };
 
     const handleReegister = (e) => {
         e.preventDefault();
@@ -21,8 +37,10 @@ const Register = () => {
         const email = form.email.value;
         const photoUrl = form.photo.value;
         const password = form.password.value;
-        console.log(name, email, photoUrl, password);
+
         const user = {email, password}
+
+
         
 
         fetch('https://assignment-11-server-eta-jade.vercel.app/users', {
@@ -50,20 +68,9 @@ const Register = () => {
             });
 
 
-        //password Validation
-        //reset error and status
-        // setErrorMessage('');
-        // setSuccess(false);
 
-        // if(password.length < 6){
-        //     setErrorMessage('Password should be 6 charecter')
-        // }
 
-        // const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
-        // if(!passwordRegex.test(password)){
-        //     setErrorMessage('At last 1 uppercase,1 lowercase and 1 number and 1 special character');
-        //     return;
-        // }
+              
 
 
         //save new user
@@ -92,8 +99,9 @@ const Register = () => {
                         <Lottie animationData={registerLottieData}></Lottie>
                     </div>
                     <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
-                        <h1 className="text-5xl ml-2 mt-4 font-bold text-center">Register now!</h1>
+                        
                         <form onSubmit={handleReegister} className="card-body">
+                        <h1 className="text-3xl ml-2 mt-2 font-bold text-center">Create Your Account!</h1>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -114,9 +122,22 @@ const Register = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                                <input type="password" name="password" placeholder="password" value={password}
+                                onChange={handlePasswordChange}
+                                className={`input input-bordered ${
+                                    passwordErrors.length ? "input-error" : ""
+                                }`}
+                                required
+                                />
+                                <div className="mt-2">
+                                {passwordErrors.map((error, index) => (
+                                    <p key={index} className="text-red-500 text-sm">
+                                    {error}
+                                    </p>
+                                ))}
+                                </div>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary text-lg font-bold text-white">Register</button>
