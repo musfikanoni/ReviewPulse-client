@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const AddReview = ({service}) => {
     const {id} = useParams();
@@ -103,7 +103,15 @@ const AddReview = ({service}) => {
                     <input type="hidden" name="rating" value={rating} />
                 </div>
                 <div className="form-control mt-6">
-                <button className="btn btn-primary">Add Review</button>
+                {
+                    user?  <>
+                        <button className="btn btn-primary w-full text-md font-bold text-white">Add Review</button>
+                    </> : <>
+                        <Link to='/login'>
+                            <button className="btn btn-primary w-full text-md font-bold text-white">Add Review</button>
+                        </Link>
+                    </>
+                }
                 </div>
             </form>
         </div>

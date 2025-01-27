@@ -20,7 +20,7 @@ const FeaturedServices = () => {
             </div>
             <div className="flex justify-center pb-24">
                 <Link to="/services">
-                    <button className="btn btn-outline btn-error">See all Services</button>
+                    <button className="btn font-bold text-lg btn-outline text-[#3F00E7] border-[#3F00E7] text-vborder-[#3F00E7] hover:bg-[#3F00E7] hover:border-[#3F00E7]">See all Services</button>
                 </Link>
             </div>
         </div>

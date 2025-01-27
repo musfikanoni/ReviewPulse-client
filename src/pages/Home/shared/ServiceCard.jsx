@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const ServiceCard = ({service}) => {
 
     const {_id, photoUrl, title, description, category, price} = service;
+    console.log(service)
 
     return (
         <div>
@@ -24,7 +25,7 @@ const ServiceCard = ({service}) => {
                     </div>
                     <div className="flex items-start gap-2">
                         <GiMoneyStack className="text-xl" />
-                        <p className='font-bold text-md text-slate-500'>{price.price} {price.currency}</p>
+                        <p className='font-bold text-md text-slate-500'>{price?.price} {price?.currency}</p>
                     </div>
                     <div className="card-actions justify-center">
                         <Link to={`/services/${_id}`}>
