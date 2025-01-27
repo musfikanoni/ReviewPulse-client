@@ -40,9 +40,6 @@ const Register = () => {
 
         const user = {email, password}
 
-
-        
-
         fetch('https://assignment-11-server-eta-jade.vercel.app/users', {
             method: 'POST',
             headers: {
@@ -66,12 +63,6 @@ const Register = () => {
                 toast.onmouseleave = Swal.resumeTimer;
             }
             });
-
-
-
-
-              
-
 
         //save new user
         createUser(email, password)

@@ -32,7 +32,7 @@ const Navbar = () => {
     </>
     return (
         <div className='max-w-7xl mx-auto'>
-            <div className="navbar bg-base-100 py-4 pb-11">
+            <div className="navbar bg-base-100 py-4 pb-7">
                 <div className="navbar-start">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -58,7 +58,9 @@ const Navbar = () => {
                 
                     <div className="flex">
                         <img className='w-12' src={logo} alt="" />
-                        <a className="btn bg-transparent hover:bg-transparent hober:border-none border-none shadow-none text-xl">ReviewPulse</a>
+                        <div className="lg:block md:block hidden">
+                            <a className="btn bg-transparent hover:bg-transparent hober:border-none border-none shadow-none text-xl">ReviewPulse</a>
+                        </div>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
