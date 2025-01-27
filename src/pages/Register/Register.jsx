@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import registerLottieData from '../../assets/lottie/register.json';
 import Lottie from 'lottie-react';
 import AuthContext from '../../context/AuthContext/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../Home/shared/SocialLogin';
 import Swal from 'sweetalert2';
 
@@ -91,7 +91,7 @@ const Register = () => {
                     <div className="w-[45%]">
                         <Lottie animationData={registerLottieData}></Lottie>
                     </div>
-                    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
                         <h1 className="text-5xl ml-2 mt-4 font-bold text-center">Register now!</h1>
                         <form onSubmit={handleReegister} className="card-body">
                             <div className="form-control">
@@ -119,17 +119,12 @@ const Register = () => {
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Register</button>
+                                <button className="btn btn-primary text-lg font-bold text-white">Register</button>
                             </div>
                             <div className="divider">OR</div>
                             <SocialLogin></SocialLogin>
+                            <p>Already have an account? Please <Link to="/login" className='text-[#4A00FF]'>Login</Link></p>
                         </form>
-                        {/* {
-                            errorMessage && <p className='text-red-700'>{errorMessage}</p>
-                        }
-                        {
-                            success && <p>Succssfully Register</p>
-                        } */}
                     </div>
                 </div>
             </div>

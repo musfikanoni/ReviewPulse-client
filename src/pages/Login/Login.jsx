@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import loginLottieData from '../../assets/lottie/login.json'
 import Lottie from 'lottie-react';
 import AuthContext from '../../context/AuthContext/AuthContext';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import SocialLogin from '../Home/shared/SocialLogin';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -54,9 +55,10 @@ const Login = () => {
                     <div className="w-[42%]">
                         <Lottie animationData={loginLottieData}></Lottie>
                     </div>
-                    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
                     <h1 className="text-3xl ml-2 mt-4 font-bold text-center">Welcome Back!</h1>
                     <form onSubmit={handleLogin} className="card-body">
+                    <SocialLogin></SocialLogin>
                         <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
@@ -68,13 +70,11 @@ const Login = () => {
                             <span className="label-text">Password</span>
                         </label>
                         <input type="password" name='password' placeholder="password" className="input input-bordered" required />
-                        <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                        </label>
                         </div>
                         <div className="form-control mt-6">
                         <button className="btn btn-primary">Login</button>
                         </div>
+                        <p>Create an Account? <Link to="/register" className='text-[#4A00FF]'>Register here</Link></p>
                     </form>
                     </div>
                 </div>
