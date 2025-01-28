@@ -1,6 +1,5 @@
 import {
     createBrowserRouter,
-    // RouterProvider,
   } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home/Home";
@@ -14,7 +13,6 @@ import FeaturedServices from "../pages/Home/FeaturedServices";
 import MyServices from "../pages/MyServices/MyServices";
 import MyReviews from "../pages/MyReviews/MyReviews";
 import Error from "../pages/Error/Error"
-// import MeetPartners from "../pages/Home/MeetPartners";
 
   const router = createBrowserRouter([
     {
@@ -50,12 +48,10 @@ import Error from "../pages/Error/Error"
         {
           path: 'myServices',
           element: <PrivateRoute><MyServices></MyServices></PrivateRoute>,
-          // loader: ()
         },
         {
           path: 'myReviews',
           element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>,
-          // loader: ({params}) => fetch(`https://assignment-11-server-eta-jade.vercel.app/services/${params.id}`),
         },
         {
           path: 'register',

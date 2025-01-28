@@ -22,11 +22,9 @@ import cart5 from '../../assets/Home/cart-5.jpg';
 
 const MeetPartners = () => {
 
-
     const [swiperRef, setSwiperRef] = useState(null);
     const appendNumber = useRef(500);
     const prependNumber = useRef(1);
-    // Create array with 500 slides
     const [slides, setSlides] = useState(
       Array.from({ length: 5 }).map((_, index) => `Slide ${index + 1}`)
     );

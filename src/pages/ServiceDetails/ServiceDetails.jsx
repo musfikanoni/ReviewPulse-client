@@ -2,17 +2,12 @@ import React, { useContext, useState } from 'react';
 
 import { Helmet } from 'react-helmet';
 import { useLoaderData, useNavigate } from 'react-router-dom';
-// import AuthContext from '../../context/AuthContext/AuthContext';
-
 import '@smastrom/react-rating/style.css';
-
-// import useAuth from '../../hooks/useAuth';
 import AddReview from '../AddReview/AddReview';
 
 
 const ServiceDetails = () => {
-    
-    // const {user} = useContext(AuthContext);
+
     
     const service = useLoaderData();
     const {photoUrl, title, description, category, price, companyName, website} = service;
@@ -22,7 +17,6 @@ const ServiceDetails = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Service Details - ReviewPulse Service Website</title>
-                <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div className="lg:flex lg:gap-5 lg:mx-0 mx-5">
                 <div className=" p-5 lg:flex-col rounded-xl border flex-col">
@@ -35,7 +29,6 @@ const ServiceDetails = () => {
                         <p className="font-medium pt-1 text-gray-600"><span className='font-bold text-black'>Company Name:</span> {companyName}</p>
                         <p className="font-medium pt-1 text-gray-600"><span className='font-bold text-black'>Website:</span> <a href="#">{website}</a></p>
                         <p className="font-medium pt-1 text-gray-600"><span className='font-bold text-black'>Price:</span> {price.price} {price.currency}</p>
-                        {/* <button className="btn btn-primary">Get Started</button> */}
                     </div>
                 </div>
                 <div className="rounded-xl border mt-7 lg:mt-0 lg:w-9/12 w-full max-w-3xl">

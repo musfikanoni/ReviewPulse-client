@@ -45,7 +45,6 @@ const AddService = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Add Service - ReviewPulse service Website</title>
-                <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
              <div className="card bg-base-100 w-full max-w-3xl shrink-0 shadow-2xl">
                 <form onSubmit={handleAddService} className="card-body">

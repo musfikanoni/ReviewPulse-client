@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 import { MdDeleteForever } from 'react-icons/md';
 import useAuth from '../../hooks/useAuth';
-// import Modal from './Modal'; // Assume Modal is extracted into a separate file
 import { Rating } from '@smastrom/react-rating';
 import Modal from './Modal';
 

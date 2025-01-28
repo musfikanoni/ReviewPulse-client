@@ -49,7 +49,6 @@ const Modal = ({ service, onClose, onUpdate }) => {
     return (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 overflow-y-scroll">
             <div className="rounded-lg shadow-lg w-11/12 md:w-6/12">
-                {/* <h2 className="text-2xl font-bold mb-4">Update Service</h2> */}
                 <div className="card bg-base-100 w-full max-w-3xl">
                     <form onSubmit={handleUpdateService} className="card-body">
                         {/* Service Image */}
@@ -223,7 +222,6 @@ const MyServices = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>My Services - ReviewPulse Service Website</title>
-                <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
 
             <div className="lg:w-6/12 md:w-6/12 mx-auto pt-7 pb-10 px-5">
@@ -278,9 +276,8 @@ const MyServices = () => {
                     </tbody>
                 </table>
             </div>
-                {/* Render Modal Conditionally */}
-                        {selectedService && (
-                        <Modal service={selectedService} onClose={closeModal} onUpdate={handleServiceUpdate}/>
+                {selectedService && (
+                <Modal service={selectedService} onClose={closeModal} onUpdate={handleServiceUpdate}/>
             )}
         </div>
     );

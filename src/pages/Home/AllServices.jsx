@@ -12,7 +12,6 @@ const AllServices = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Services - ReviewPulse Service Website</title>
-                <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <h1 className='font-bold text-3xl text-center my-8'>Our All Services</h1>
 

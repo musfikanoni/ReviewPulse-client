@@ -22,9 +22,6 @@ const AddReview = ({service}) => {
         initialData.rating = rating;
         const form = e.target;
         const review = form.review.value;
-        // const date = form.date.value;
-        // const email = form.date.value;
-        // const rating = form.rating.value;
 
         const reviewPost = {
             review_id: id, 
