@@ -3,7 +3,6 @@ import Banner from './Banner';
 import { Helmet } from 'react-helmet';
 import { Outlet } from 'react-router-dom';
 import MeetPartners from './MeetPartners';
-import OurServiceProcess from './OurServiceProcess';
 
 const Home = () => {
     return (
@@ -16,7 +15,6 @@ const Home = () => {
             <Banner></Banner>
             <Outlet></Outlet>
             <MeetPartners></MeetPartners>
-            <OurServiceProcess></OurServiceProcess>
         </div>
     );
 };
