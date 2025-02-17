@@ -218,12 +218,12 @@ const MyServices = () => {
 
     
     return (
-        <div>
+        <div className='bg-[#F2F4F8] py-20'>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>My Services - ReviewPulse Service Website</title>
             </Helmet>
-
+            <h2 className='text-3xl font-bold pb-10 text-center'>My Add All Services</h2>
             <div className="lg:w-6/12 md:w-6/12 mx-auto pt-7 pb-10 px-5">
                 <label className="input input-bordered flex items-center gap-2">
                     <input type="text" className="grow" placeholder="Search" />
@@ -240,7 +240,7 @@ const MyServices = () => {
                 </label>
             </div>
 
-            <div className="overflow-x-auto max-w-7xl mx-auto">
+            <div className="overflow-x-auto max-w-7xl bg-white mx-auto">
                 <table className="table">
                     {/* head */}
                     <thead>

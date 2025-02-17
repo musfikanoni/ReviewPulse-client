@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import '@smastrom/react-rating/style.css';
 import AddReview from '../AddReview/AddReview';
+import { div } from 'motion/react-client';
 
 
 const ServiceDetails = () => {
@@ -13,13 +14,14 @@ const ServiceDetails = () => {
     const {photoUrl, title, description, category, price, companyName, website} = service;
 
     return (
-        <div className='max-w-7xl mx-auto pt-5 pb-24'>
+        <div className='bg-[#F2F4F8]'>
+            <div className='max-w-7xl mx-auto py-20'>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Service Details - ReviewPulse Service Website</title>
             </Helmet>
             <div className="lg:flex lg:gap-5 lg:mx-0 mx-5">
-                <div className=" p-5 lg:flex-col rounded-xl border flex-col">
+                <div className="p-5 lg:flex-col rounded-xl border flex-col bg-white">
                     <img className='rounded-xl lg:max-w-xl mx-w-xs lg:h-[35vh]'
                     src={photoUrl} />
                     <div className='pt-3'>
@@ -31,9 +33,10 @@ const ServiceDetails = () => {
                         <p className="font-medium pt-1 text-gray-600"><span className='font-bold text-black'>Price:</span> {price.price} {price.currency}</p>
                     </div>
                 </div>
-                <div className="rounded-xl border mt-7 lg:mt-0 lg:w-9/12 w-full max-w-3xl">
+                <div className="rounded-xl border bg-white mt-7 lg:mt-0 lg:w-9/12 w-full max-w-3xl">
                     <AddReview service={service}></AddReview>
                 </div>
+            </div>
             </div>
         </div>
 

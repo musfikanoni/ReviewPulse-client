@@ -61,16 +61,16 @@ const MyReviews = () => {
     }
 
     return (
-        <div className=" bg-[#F2F4F8]">
+        <div className=" bg-[#F2F4F8] py-20">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>My Reviews - ReviewPulse Service Website</title>
             </Helmet>
             <div className="max-w-7xl mx-auto">
-                <h2 className='text-3xl font-bold text-center py-5'>My All Reviews</h2>
+                <h2 className='text-3xl font-bold text-center pb-10'>My All Reviews</h2>
 
                 {reviews.length === 0 ? (
-                    <div className="text-center my-5">
+                    <div className="text-center py-5">
                         <p className="text-lg font-semibold">No reviews found. Start by adding one!</p>
                     </div>
                 ) : (

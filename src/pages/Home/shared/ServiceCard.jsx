@@ -7,7 +7,6 @@ import * as motion from "motion/react-client"
 const ServiceCard = ({service}) => {
 
     const {_id, photoUrl, title, description, category, price} = service;
-    console.log(service)
 
     return (
         <div>

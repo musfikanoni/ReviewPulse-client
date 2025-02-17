@@ -80,7 +80,7 @@ const Navbar = () => {
                                             user.photoURL ? (
                                                 <img src={user.photoURL} alt="" className='w-10 h-10 rounded-full cursor-pointer' />
                                             ) : (
-                                                <FaRegCircleUser className='text-3xl text-gray-700 cursor-pointer' />
+                                                <FaRegCircleUser className='text-3xl text-gray-300 cursor-pointer' />
                                             )
                                         }
                                         </Link>
