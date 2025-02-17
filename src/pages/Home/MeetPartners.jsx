@@ -64,8 +64,8 @@ const MeetPartners = () => {
                     className="mySwiper border-2 border-pcolor rounded-lg"
                     breakpoints={{
                         //mobile devices
-                        430: {
-                            slidesPerView: 2,
+                        390: {
+                            slidesPerView: 1,
                             spaceBetween: 10,
                         },
                         //tablets
@@ -87,7 +87,8 @@ const MeetPartners = () => {
                             </div>
                             <div className='pt-4'>
                               <h3 className="text-black font-semibold text-md">Moonlight Airlines</h3>
-                              <p>Moonlight Airlines is a virtual airline operating within the online platform Second Life. Founded in 2015 by Juliettrush Resident, connecting various airports across the mainland continents.</p>
+                              <p className="text-base">Moonlight Airlines is a virtual airline operating within the online platform Second Life.
+                                Connecting various airports across the mainland continents.</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -99,7 +100,7 @@ const MeetPartners = () => {
                         
                         <div className='pt-4'>
                           <h3 className="text-black pt-3 font-semibold text-md">Dream Home</h3>
-                          <p>
+                          <p className="text-base">
                           The term "Dream Home" is associated with several companies specializing in various aspects of residential design, construction, and real estate.</p>
                         </div>
                         </div>
@@ -112,7 +113,7 @@ const MeetPartners = () => {
                             
                             <div className='pt-4'>
                               <h3 className="text-black pt-3 font-semibold text-md">Home Maker</h3>
-                              <p>The term "Home Maker" is associated with several companies specializing in various aspects of home construction, interior design, and building materials.</p>
+                              <p className="text-base">The term "Home Maker" is associated with several companies specializing in various aspects of home construction, interior design, and building materials.</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -127,7 +128,8 @@ const MeetPartners = () => {
                             
                             <div className='pt-4'>
                               <h3 className="text-black pt-3 font-semibold text-md">Foody</h3>
-                              <p>Each of these companies operates in the food sector, focusing on different aspects such as product offerings or delivery services, to cater to diverse consumer preferences.</p>
+                              <p className="text-base">Each of these companies operates in the food sector, focusing on different aspects such 
+                                as delivery services, to cater to diverse consumer preferences.</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -139,7 +141,7 @@ const MeetPartners = () => {
                             
                             <div className='pt-4'>
                               <h3 className="text-black pt-3 font-semibold text-md">Elevate Vision</h3>
-                              <p>Based in Kitwe, Zambia, Elevate Vision Ltd is a full-service print and corporate branding company. They offer professional services in brand development.</p>
+                              <p className="text-base">Based in Kitwe, Zambia, Elevate Vision Ltd is a full-service print and corporate branding company. They offer professional services in brand development.</p>
                             </div>
                         </div>
                     </SwiperSlide>

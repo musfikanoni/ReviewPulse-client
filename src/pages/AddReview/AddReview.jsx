@@ -102,7 +102,7 @@ const AddReview = ({service}) => {
                 <div className="form-control mt-6">
                 {
                     user?  <>
-                        <button className="btn btn-primary w-full text-md font-bold text-white">Add Review</button>
+                        <button className="btn rounded-full bg-gradient-to-r from-[#a233ce] to-[#7847fe] border-none text-lg w-full text-md font-bold text-white">Add Review</button>
                     </> : <>
                         <Link to='/login'>
                             <button className="btn btn-primary w-full text-md font-bold text-white">Add Review</button>

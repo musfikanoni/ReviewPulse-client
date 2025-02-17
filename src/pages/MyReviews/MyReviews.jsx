@@ -61,46 +61,51 @@ const MyReviews = () => {
     }
 
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className=" bg-[#F2F4F8]">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>My Reviews - ReviewPulse Service Website</title>
             </Helmet>
+            <div className="max-w-7xl mx-auto">
+                <h2 className='text-3xl font-bold text-center py-5'>My All Reviews</h2>
 
-            {reviews.length === 0 ? (
-                <div className="text-center my-5">
-                    <p className="text-lg font-semibold">No reviews found. Start by adding one!</p>
-                </div>
-            ) : (
-                reviews.map((review) => (
-                    <div key={review._id} className="card my-5 border">
-                        <div className="card-body">
-                            <h2 className="card-title">{review.title}</h2>
-                            <p>Company Name: {review.companyName}</p>
-                            <p>Category: {review.category}</p>
-                            <p>{review.review}</p>
-                            <div className="flex items-center gap-1">
-                                <span className="font-semibold text-lg">Rating: {review.rating}</span>
-                                <Rating className="h-8" style={{ maxWidth: 200 }} value={review.rating} readOnly />
-                            </div>
-                            <div className="flex justify-end gap-5">
-                                <button onClick={() => setSelectedReview(review)} className="btn">Update</button>
-                                <button onClick={() => handleDelete(review._id)} className="text-4xl text-red-500">
-                                    <MdDeleteForever />
-                                </button>
+                {reviews.length === 0 ? (
+                    <div className="text-center my-5">
+                        <p className="text-lg font-semibold">No reviews found. Start by adding one!</p>
+                    </div>
+                ) : (
+                    reviews.map((review) => (
+                        <div className="py-10">
+                                <div key={review._id} className="card border bg-white">
+                                <div className="card-body">
+                                    <h2 className="card-title">{review.title}</h2>
+                                    <p>Company Name: {review.companyName}</p>
+                                    <p>Category: {review.category}</p>
+                                    <p>{review.review}</p>
+                                    <div className="flex items-center gap-1">
+                                        <span className="font-semibold text-lg">Rating: {review.rating}</span>
+                                        <Rating className="h-8" style={{ maxWidth: 200 }} value={review.rating} readOnly />
+                                    </div>
+                                    <div className="flex justify-end gap-5">
+                                        <button onClick={() => setSelectedReview(review)} className="py-2 px-5 rounded-full bg-gradient-to-r from-[#a233ce] to-[#7847fe] border-none text-lg text-white">Update</button>
+                                        <button onClick={() => handleDelete(review._id)} className="text-4xl text-red-500">
+                                            <MdDeleteForever />
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))
-            )}
+                    ))
+                )}
 
-            {selectedReview && (
-                <Modal
-                    review={selectedReview}
-                    onClose={() => setSelectedReview(null)}
-                    onUpdate={handleServiceUpdate}
-                />
-            )}
+                {selectedReview && (
+                    <Modal
+                        review={selectedReview}
+                        onClose={() => setSelectedReview(null)}
+                        onUpdate={handleServiceUpdate}
+                    />
+                )}
+            </div>
         </div>
     );
 };

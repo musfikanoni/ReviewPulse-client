@@ -42,7 +42,7 @@ const Navbar = () => {
                             className="h-5 w-5"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke="currentColor">
+                            stroke="#FFFFFF">
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
@@ -65,7 +65,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu text-white gap-3 font-medium menu-horizontal px-1">
+                        <ul className="menu text-lg text-white gap-3 font-medium menu-horizontal px-1">
                             {links}
                         </ul>
                     </div>
@@ -88,14 +88,14 @@ const Navbar = () => {
                                             {user.displayName || 'User'}
                                         </div>
                                     </div>
-                                    <button onClick={handleLogOut} className='btn btn-primary text-white'>Log Out</button>
+                                    <button onClick={handleLogOut} className='px-5 py-2.5 rounded-full font-semibold bg-gradient-to-r from-[#a233ce] via-[#b60bffd2] to-[#936dfa] border-none text-white'>Log Out</button>
                                 </div>
                             </> : <>
                                 <Link to="/login">
-                                    <button className='btn'>Login</button>
+                                    <button className='px-5 py-2.5 rounded-full font-semibold bg-gradient-to-r from-[#a233ce] via-[#b60bffd2] to-[#936dfa] border-none text-white'>Login</button>
                                 </Link>
                                 <Link to="/register">
-                                    <button className='btn'>Register</button>
+                                    <button className='px-5 py-2.5 rounded-full font-semibold bg-gradient-to-r from-[#a233ce] via-[#b60bffd2] to-[#936dfa] border-none text-white'>Register</button>
                                 </Link>
                             </>
                         }

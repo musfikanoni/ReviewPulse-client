@@ -2,6 +2,7 @@ import React from 'react';
 import { GiMoneyStack } from 'react-icons/gi';
 import { TbCategory } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
+import * as motion from "motion/react-client"
 
 const ServiceCard = ({service}) => {
 
@@ -18,7 +19,7 @@ const ServiceCard = ({service}) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title font-bold">{title}</h2>
-                    <p className='text-gray-500 text-justify font-medium'><span className='font-bold text-md text-slate-700'>Description:</span> {description}</p>
+                    <p className='text-gray-500 text-justify font-medium'>{description}</p>
                     <div className="flex items-center gap-2">
                         <TbCategory className='text-xl' />
                         <p className='font-bold text-md text-slate-700'>{category}</p>
@@ -26,9 +27,14 @@ const ServiceCard = ({service}) => {
                         <GiMoneyStack className="text-xl" />
                         <p className='font-bold text-md text-slate-500'>{price?.price} {price?.currency}</p>
                     </div>
-                    <div className="card-actions justify-center">
+                    <div className="card-actions justify-center pt-3">
                         <Link to={`/services/${_id}`}>
-                            <button className="btn font-semibold text-lg text-white rounded-xl btn-primary">See Details</button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.6 }}
+                            className="py-2 px-7 font-semibold
+                             text-white rounded-full bg-gradient-to-r from-[#a233ce] 
+                             to-[#7847fe] border-none text-lg">See Details</motion.button>
                         </Link>
                     </div>
                 </div>

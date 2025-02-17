@@ -41,7 +41,7 @@ const AddService = () => {
 
     }
     return (
-        <div className='flex justify-center pt-5 pb-20'>
+        <div className='flex justify-center bg-[#F2F4F8] pt-5 pb-20'>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Add Service - ReviewPulse service Website</title>
@@ -137,7 +137,7 @@ const AddService = () => {
                     </div>
                         
                     <div className="form-control mt-6">
-                    <button className="btn btn-primary">Add Service</button>
+                    <button className="btn rounded-full bg-gradient-to-r from-[#a233ce]  to-[#7847fe] border-none text-lg text-white">Add Service</button>
                     </div>
                 </form>
             </div>
