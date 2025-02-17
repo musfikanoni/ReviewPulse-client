@@ -18,7 +18,9 @@ const SocialLogin = () => {
     return (
         <div>
             
-            <button onClick={handleGoogleLogIn} className='btn w-full'><img className='h-7' src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="" /> Continue with Google</button>
+            <button onClick={handleGoogleLogIn} className='btn rounded-full w-full'>
+                <img className='h-7' src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="" /> Continue with Google
+            </button>
         </div>
     );
 };

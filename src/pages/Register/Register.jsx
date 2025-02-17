@@ -84,7 +84,7 @@ const Register = () => {
     }
     return (
         <div>
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero bg-base-200 py-24 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="w-[45%]">
                         <Lottie animationData={registerLottieData}></Lottie>
@@ -131,7 +131,7 @@ const Register = () => {
                                 </div>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary text-lg font-bold text-white">Register</button>
+                                <button className="btn rounded-full bg-gradient-to-r from-[#a233ce]  to-[#7847fe] border-none text-lg font-bold text-white">Register</button>
                             </div>
                             <div className="divider">OR</div>
                             <SocialLogin></SocialLogin>

@@ -72,7 +72,7 @@ const Login = () => {
                         <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
-                        <button className="btn btn-primary text-white font-bold text-lg">Login</button>
+                        <button className="btn rounded-full bg-gradient-to-r from-[#a233ce]  to-[#7847fe] border-none text-white font-bold text-lg">Login</button>
                         </div>
                         <p>Create an Account? <Link to="/register" className='text-[#4A00FF]'>Register here</Link></p>
                     </form>
