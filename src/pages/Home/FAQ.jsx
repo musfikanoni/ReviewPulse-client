@@ -4,7 +4,7 @@ import why from '../../assets/Home/Q.png';
 const FAQ = () => {
     return (
         <div>
-            <div className="hero bg-base-200 rounded-xl min-h-min mb-72">
+            <div className="hero bg-base-200 rounded-xl min-h-min mb-72 mt-20">
                 <div className="hero-content grid  lg:grid-cols-2 md:grid-cols-1 grid-cols-1">
                     <div className='py-5 pl-5'>
                         <h1 className="lg:text-3xl text-xl font-bold">Some Common FAQ?</h1>
