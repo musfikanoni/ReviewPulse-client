@@ -48,7 +48,7 @@ const MeetPartners = () => {
     };
 
     return (
-        <section className='px-4 lg:px-0 py-20'>
+        <section className='px-4 lg:px-0 py-20 mb-52'>
           <h2 className='text-center pb-10 font-extrabold text-4xl'>Meet Our Partners</h2>
             <div className="overflow-hidden">
                 <Swiper
@@ -61,7 +61,7 @@ const MeetPartners = () => {
                     }}
                     navigation={true}
                     modules={[Pagination, Navigation]}
-                    className="mySwiper border-2 border-pcolor rounded-lg"
+                    className="mySwiper border-2 border-pcolor rounded-xl"
                     breakpoints={{
                         //mobile devices
                         390: {

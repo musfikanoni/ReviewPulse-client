@@ -9,6 +9,7 @@ import { FaRegEdit } from 'react-icons/fa';
 
 const Modal = ({ service, onClose, onUpdate }) => {
     const [startDate, setStartDate] = useState(new Date());
+    const [loading, setLoading] = useState(true);
     const [updatedTitle, setUpdatedTitle] = useState(service?.title || '');
     const {user} = useAuth();
 
@@ -44,6 +45,9 @@ const Modal = ({ service, onClose, onUpdate }) => {
                 }
             })
     
+        }
+        if (loading) {
+            return <div className="text-center my-5">Loading...</div>;
         }
 
     return (

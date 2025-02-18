@@ -3,6 +3,7 @@ import Banner from './Banner';
 import { Helmet } from 'react-helmet';
 import { Outlet } from 'react-router-dom';
 import MeetPartners from './MeetPartners';
+import Newsletter from './Newsletter';
 
 const Home = () => {
     return (
@@ -15,7 +16,9 @@ const Home = () => {
             <Outlet></Outlet>
             <div className='max-w-7xl mx-auto'>
                 <MeetPartners></MeetPartners>
+                
             </div>
+            <Newsletter></Newsletter>
         </>
     );
 };
