@@ -7,6 +7,7 @@ import Newsletter from './Newsletter';
 // import WhyChooseUs from './WhyChooseUs';
 import FAQ from './FAQ';
 import Reviews from './Reviews';
+import OurWorkProcess from './OurWorkProcess';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <Outlet></Outlet>
             <div className='max-w-7xl mx-auto'>
                 <MeetPartners></MeetPartners>
+                <OurWorkProcess></OurWorkProcess>
                 <Reviews></Reviews>
                 <FAQ></FAQ>
             </div>
