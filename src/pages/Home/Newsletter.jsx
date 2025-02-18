@@ -3,7 +3,7 @@ import React from 'react';
 const Newsletter = () => {
     return (
         <div className="max-w-7xl mx-auto">
-            <div className='border-2 py-5 px-5 w-full lg:w-[84%] rounded-xl -mt-52 my-32 absolute'>
+            <div className='border-2 py-5 px-5 w-full lg:w-[84.3%] rounded-xl -mt-52 my-32 absolute'>
                 <div className="hero bg-base-200 py-20 min-h-min bg-gradient-to-r from-[#a233ce] via-[pink] to-[#7847fe] rounded-xl border">
                     <div className="hero-content flex-col">
                         <h2 className='text-xl md:text-3xl font-bold text-black'>Subscribe to our Newsletter</h2>

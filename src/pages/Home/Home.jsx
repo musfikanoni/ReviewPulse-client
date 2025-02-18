@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 import { Outlet } from 'react-router-dom';
 import MeetPartners from './MeetPartners';
 import Newsletter from './Newsletter';
+// import WhyChooseUs from './WhyChooseUs';
+import FAQ from './FAQ';
 
 const Home = () => {
     return (
@@ -16,7 +18,7 @@ const Home = () => {
             <Outlet></Outlet>
             <div className='max-w-7xl mx-auto'>
                 <MeetPartners></MeetPartners>
-                
+                <FAQ></FAQ>
             </div>
             <Newsletter></Newsletter>
         </>

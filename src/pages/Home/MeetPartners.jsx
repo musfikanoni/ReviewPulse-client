@@ -48,7 +48,7 @@ const MeetPartners = () => {
     };
 
     return (
-        <section className='px-4 lg:px-0 py-20 mb-52'>
+        <section className='px-4 lg:px-0 py-20'>
           <h2 className='text-center pb-10 font-extrabold text-4xl'>Meet Our Partners</h2>
             <div className="overflow-hidden">
                 <Swiper
