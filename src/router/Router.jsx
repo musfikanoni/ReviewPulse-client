@@ -13,6 +13,7 @@ import FeaturedServices from "../pages/Home/FeaturedServices";
 import MyServices from "../pages/MyServices/MyServices";
 import MyReviews from "../pages/MyReviews/MyReviews";
 import Error from "../pages/Error/Error"
+import AboutUs from "../pages/AboutUs/AboutUs";
 
   const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ import Error from "../pages/Error/Error"
           path: 'services',
           element: <AllServices></AllServices>,
           loader: () => fetch('https://assignment-11-server-eta-jade.vercel.app/services'),
+        },
+        {
+          path: 'aboutus',
+          element: <AboutUs></AboutUs>
         },
         {
           path: 'services/:id',

@@ -37,7 +37,7 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/services">Services</NavLink></li>
-        
+        <li><NavLink to="/aboutus">About Us</NavLink></li>
         {
             user && <>
                 <li><NavLink to="/addService">Add Service</NavLink></li>
@@ -81,7 +81,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu text-lg text-white gap-3 font-medium menu-horizontal px-1">
+                        <ul className="menu text-lg text-white font-medium menu-horizontal">
                             {links}
                         </ul>
                     </div>
@@ -96,7 +96,7 @@ const Navbar = () => {
 
                     {/* sun icon */}
                     <svg
-                        className="swap-off h-10 w-10 fill-current"
+                        className="swap-off h-10 w-10 fill-current text-gray-400"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">
                         <path
@@ -105,7 +105,7 @@ const Navbar = () => {
 
                     {/* moon icon */}
                     <svg
-                        className="swap-on h-10 w-10 fill-current"
+                        className="swap-on h-10 w-10 fill-current text-gray-300"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">
                         <path
