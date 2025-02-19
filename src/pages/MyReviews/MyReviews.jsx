@@ -61,7 +61,7 @@ const MyReviews = () => {
     }
 
     return (
-        <div className=" bg-[#F2F4F8] py-20">
+        <div className=" bg-base-200 py-20">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>My Reviews - ReviewPulse Service Website</title>
@@ -76,7 +76,7 @@ const MyReviews = () => {
                 ) : (
                     reviews.map((review) => (
                         <div className="py-10">
-                                <div key={review._id} className="card border bg-white">
+                                <div key={review._id} className="card border bg-base-100">
                                 <div className="card-body">
                                     <h2 className="card-title">{review.title}</h2>
                                     <p>Company Name: {review.companyName}</p>

@@ -222,7 +222,7 @@ const MyServices = () => {
 
     
     return (
-        <div className='bg-[#F2F4F8] py-20'>
+        <div className='bg-base-200 py-20'>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>My Services - ReviewPulse Service Website</title>
@@ -244,7 +244,7 @@ const MyServices = () => {
                 </label>
             </div>
 
-            <div className="overflow-x-auto max-w-7xl bg-white mx-auto">
+            <div className="overflow-x-auto max-w-7xl bg-base-100 mx-auto">
                 <table className="table">
                     {/* head */}
                     <thead>
