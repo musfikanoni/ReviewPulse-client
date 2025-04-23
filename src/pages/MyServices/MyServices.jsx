@@ -9,7 +9,7 @@ import { FaRegEdit } from 'react-icons/fa';
 
 const Modal = ({ service, onClose, onUpdate }) => {
     const [startDate, setStartDate] = useState(new Date());
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
     const [updatedTitle, setUpdatedTitle] = useState(service?.title || '');
     const {user} = useAuth();
 
@@ -17,10 +17,11 @@ const Modal = ({ service, onClose, onUpdate }) => {
             e.preventDefault();
             const formData = new FormData(e.target)
             const initialData = Object.fromEntries(formData.entries());
-            console.log(initialData);
+            
             const {price, currency, ...updatedService} = initialData;
             updatedService.price = {price, currency};
-            console.log(updatedService);
+            console.log(initialData);
+            // console.log(updatedService);
     
             fetch(`https://assignment-11-server-eta-jade.vercel.app/services/${service._id}`, {
                 method: 'PUT',
@@ -46,9 +47,10 @@ const Modal = ({ service, onClose, onUpdate }) => {
             })
     
         }
-        if (loading) {
-            return <div className="text-center my-5">Loading...</div>;
-        }
+
+        // if (loading) {
+        //     return <div className="text-center my-5">Loading...</div>;
+        // }
 
     return (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 overflow-y-scroll">

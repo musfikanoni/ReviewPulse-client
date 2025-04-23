@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { ScrollRestoration, useLoaderData } from 'react-router-dom';
 import ServiceCard from './shared/ServiceCard';
 import { Helmet } from 'react-helmet';
 
@@ -8,6 +8,7 @@ const AllServices = () => {
 
     return (
         <div className="bg-base-200 py-20 pt-24"> 
+        <ScrollRestoration />
             <Helmet>
                 <title>Services - ReviewPulse Service Website</title>
             </Helmet>
