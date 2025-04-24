@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, ScrollRestoration } from 'react-router-dom';
 import quality from '../../assets/about/quality.png';
 import support from '../../assets/about/support.png';
 import coming from '../../assets/about/upcomming.png';
@@ -7,6 +7,7 @@ import coming from '../../assets/about/upcomming.png';
 const AboutUs = () => {
     return (
         <div>
+            <ScrollRestoration />
             <div
                 className="hero lg:h-[85vh] md:h-[50vh] h-100vh ab-banner">
                 <div className="hero-overlay bg-opacity-60"></div>

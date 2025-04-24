@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 
 import { Helmet } from 'react-helmet';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { ScrollRestoration, useLoaderData, useNavigate } from 'react-router-dom';
 import '@smastrom/react-rating/style.css';
 import AddReview from '../AddReview/AddReview';
 import { div } from 'motion/react-client';
@@ -15,6 +15,7 @@ const ServiceDetails = () => {
 
     return (
         <div className='bg-base-200'>
+            <ScrollRestoration />
             <div className='max-w-7xl mx-auto py-20'>
             <Helmet>
                 <meta charSet="utf-8" />
