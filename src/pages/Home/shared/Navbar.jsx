@@ -74,7 +74,7 @@ const Navbar = () => {
                         </div>
                     
                         <div className="flex">
-                            <img className='w-12' src={logo} alt="" />
+                            <img className='lg:max-w-14 max-w-10' src={logo} alt="" />
                             <div className="lg:block md:block hidden">
                                 <a className="btn bg-transparent text-white hover:bg-transparent hober:border-none border-none shadow-none text-xl">ReviewPulse</a>
                             </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <div className="navbar-end gap-3">
+                    <div className="navbar-end lg:gap-3 gap-2">
 
                     <label className="swap swap-rotate">
                     {/* this hidden checkbox controls the state */}
@@ -96,7 +96,7 @@ const Navbar = () => {
 
                     {/* sun icon */}
                     <svg
-                        className="swap-off h-10 w-10 fill-current text-gray-400"
+                        className="swap-off lg:h-10 h-7 w-7 lg:w-10 fill-current text-gray-400"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">
                         <path
@@ -105,7 +105,7 @@ const Navbar = () => {
 
                     {/* moon icon */}
                     <svg
-                        className="swap-on h-10 w-10 fill-current text-gray-300"
+                        className="swap-on lg:h-10 h-7 w-7 lg:w-10 fill-current text-gray-300"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">
                         <path
@@ -116,12 +116,12 @@ const Navbar = () => {
 
                         {
                             user ? <>
-                                <div className="flex gap-5 items-center">
+                                <div className="flex lg:gap-5 gap-2 items-center">
                                     <div className="group">
                                         <Link>
                                         {
                                             user.photoURL ? (
-                                                <img src={user.photoURL} alt="" className='w-10 h-10 rounded-full cursor-pointer' />
+                                                <img src={user.photoURL} alt="" className='lg:w-10 lg:h-10 h-7 w-7 rounded-full cursor-pointer' />
                                             ) : (
                                                 <FaRegCircleUser className='text-3xl text-gray-300 cursor-pointer' />
                                             )
@@ -131,7 +131,7 @@ const Navbar = () => {
                                             {user.displayName || 'User'}
                                         </div>
                                     </div>
-                                    <button onClick={handleLogOut} className='px-5 py-2.5 rounded-full font-semibold bg-gradient-to-r from-[#a233ce] via-[#b60bffd2] to-[#936dfa] border-none text-white'>Log Out</button>
+                                    <button onClick={handleLogOut} className='lg:px-5 px-3 lg:text-base text-sm py-2 lg:py-2.5 rounded-full font-semibold bg-gradient-to-r from-[#a233ce] via-[#b60bffd2] to-[#936dfa] border-none text-white'>Log Out</button>
                                 </div>
                             </> : <>
                                 <Link to="/login">
