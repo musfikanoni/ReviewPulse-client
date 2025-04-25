@@ -27,7 +27,7 @@ const Banner = () => {
             <div className="carousel w-full">
                 <div id="slide1" className={`carousel-item relative w-full ${currentSlide === 1 ? 'block' : 'hidden'}`}>
                     <div
-                        className="hero min-h-[80vh]"
+                        className="hero lg:min-h-[80vh] min-h-[40vh]"
                         style={{
                             backgroundImage: "url(https://i.ibb.co.com/G9L9Spj/banner-1.jpg)",
                         }}>
@@ -37,7 +37,7 @@ const Banner = () => {
                                 data-aos-easing="linear"
                                 data-aos-duration="1500">
                                 <h1
-                                    className="text-5xl font-bold pb-3">
+                                    className="lg:text-5xl text-3xl font-bold pb-3">
                                     Hospitality & Travel Services
                                 </h1>
                                 <p
@@ -52,7 +52,7 @@ const Banner = () => {
 
                 <div id="slide2" className={`carousel-item relative w-full ${currentSlide === 2 ? 'block' : 'hidden'}`}>
                     <div
-                        className="hero min-h-[80vh]"
+                        className="hero lg:min-h-[80vh] min-h-[40vh]"
                         style={{
                             backgroundImage: "url(https://i.ibb.co.com/WpbHXZL/banner-2.webp)",
                         }}>
@@ -60,7 +60,7 @@ const Banner = () => {
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-4xl">
                                 <h1
-                                    className="text-5xl font-bold pb-3">
+                                    className="lg:text-5xl text-3xl font-bold pb-3">
                                     E-commerce & Delivery Services
                                 </h1>
                                 <p
@@ -74,7 +74,7 @@ const Banner = () => {
 
                 <div id="slide3" className={`carousel-item relative w-full ${currentSlide === 3 ? 'block' : 'hidden'}`}>
                     <div
-                        className="hero min-h-[80vh]"
+                        className="hero lg:min-h-[80vh] min-h-[40vh]"
                         style={{
                             backgroundImage: "url(https://i.ibb.co.com/2Kbn1ZB/banner-3.jpg)",
                         }}>
@@ -82,7 +82,7 @@ const Banner = () => {
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-4xl">
                                 <h1
-                                    className="text-5xl font-bold pb-3">
+                                    className="lg:text-5xl text-3xl font-bold pb-3">
                                     Professional Consultation Services
                                 </h1>
                                 <p
@@ -96,7 +96,7 @@ const Banner = () => {
 
                 <div id="slide4" className={`carousel-item relative w-full ${currentSlide === 4 ? 'block' : 'hidden'}`}>
                     <div
-                        className="hero min-h-[80vh]"
+                        className="hero lg:min-h-[80vh] min-h-[40vh]"
                         style={{
                             backgroundImage: "url(https://i.ibb.co.com/PTZ25Py/banner-4.jpg)",
                         }}>
@@ -104,7 +104,7 @@ const Banner = () => {
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-4xl">
                                 <h1
-                                    className="text-5xl font-bold pb-3">
+                                    className="lg:text-5xl text-3xl font-bold pb-3">
                                     Technology & Digital Services
                                 </h1>
                                 <p
