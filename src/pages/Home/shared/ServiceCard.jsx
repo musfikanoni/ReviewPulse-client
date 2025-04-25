@@ -22,7 +22,7 @@ const ServiceCard = ({service}) => {
                     <p className='text-gray-500 text-justify font-medium'>{description}</p>
                     <div className="flex items-center gap-2">
                         <TbCategory className='text-xl' />
-                        <p className='font-bold text-md text-slate-700'>{category}</p>
+                        <p className='font-bold text-md text-slate-700 dark:text-red-600'>{category}</p>
                     </div>                    <div className="flex items-start gap-2">
                         <GiMoneyStack className="text-xl" />
                         <p className='font-bold text-md text-slate-500'>{price?.price} {price?.currency}</p>

@@ -20,7 +20,7 @@ const OurWorkProcess = () => {
                         <p className='text-center'>Choose your desired service, fill out the required details, and submit your request online.</p>
                     </div>
                 </div>
-                <div className="card bg-base-100 lg:w-96 md:w-80 w-96 shadow-xl">
+                <div className="card bg-base-100 lg:my-0 my-3 lg:w-96 md:w-80 w-96 shadow-xl">
                     <div className="card-body">
                         <div className="flex justify-center">
                             <div className="bg-white p-3 rounded-full">
