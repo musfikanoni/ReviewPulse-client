@@ -49,7 +49,7 @@ const Navbar = () => {
     return (
         <div className="bg-[#59007c] sticky top-0 z-10">
             <div className='max-w-7xl mx-auto'>
-                <div className="navbar py-4 pb-7">
+                <div className="navbar py-3">
                     <div className="navbar-start">
                         <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -76,12 +76,12 @@ const Navbar = () => {
                         <div className="flex">
                             <img className='lg:max-w-14 max-w-10' src={logo} alt="" />
                             <div className="lg:block md:block hidden">
-                                <a className="btn bg-transparent text-white hover:bg-transparent hober:border-none border-none shadow-none text-xl">ReviewPulse</a>
+                                <a className="btn bg-transparent text-white hover:bg-transparent hober:border-none border-none shadow-none lg:text-2xl text-xl">ReviewPulse</a>
                             </div>
                         </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu text-lg text-white font-medium menu-horizontal">
+                        <ul className="menu text-base text-white font-medium menu-horizontal">
                             {links}
                         </ul>
                     </div>
