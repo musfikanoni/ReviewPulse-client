@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { easeIn, motion } from "framer-motion";
+import { easeIn } from "framer-motion";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Banner = () => {
     const [currentSlide, setCurrentSlide] = useState(1);
@@ -13,6 +15,13 @@ const Banner = () => {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: true,
+        });
+      }, []);
+
     return (
         <div>
             <div className="carousel w-full">
@@ -24,27 +33,18 @@ const Banner = () => {
                         }}>
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-neutral-content text-center">
-                            <div className="max-w-4xl">
-                                <motion.h1
-                                    animate={{ y: [-50, -50, 0], color: ['#FFFFFF'] }}
-                                    transition={{
-                                        duration: 4,
-                                        delay: 0,
-                                        ease: easeIn
-                                    }}
+                            <div className="max-w-4xl" data-aos="fade-down"
+                                data-aos-easing="linear"
+                                data-aos-duration="1500">
+                                <h1
                                     className="text-5xl font-bold pb-3">
                                     Hospitality & Travel Services
-                                </motion.h1>
-                                <motion.p
-                                    animate={{ y: [-50, -50, 0], color: ['#FFFFFF'] }}
-                                    transition={{
-                                        duration: 3,
-                                        delay: 0,
-                                        ease: easeIn
-                                    }}
+                                </h1>
+                                <p
+
                                     className="mb-5">
                                     Crafting memorable travel experiences with world-class hospitality. Your gateway to personalized travel planning and luxury accommodations. Elevating your trips with tailored services and unforgettable moments.
-                                </motion.p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -59,26 +59,14 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-4xl">
-                                <motion.h1
-                                    animate={{ y: [-50, -50, 0], color: ['#FFFFFF'] }}
-                                    transition={{
-                                        duration: 4,
-                                        delay: 0,
-                                        ease: easeIn
-                                    }}
+                                <h1
                                     className="text-5xl font-bold pb-3">
                                     E-commerce & Delivery Services
-                                </motion.h1>
-                                <motion.p
-                                    animate={{ y: [-50, -50, 0], color: ['#FFFFFF'] }}
-                                    transition={{
-                                        duration: 3,
-                                        delay: 0,
-                                        ease: easeIn
-                                    }}
+                                </h1>
+                                <p
                                     className="mb-5">
                                     From everyday essentials to unique finds, we bring it all to you. Redefining convenience with effortless e-commerce and on-time delivery. Simplifying your shopping experience with speed and reliability.
-                                </motion.p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -93,26 +81,14 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-4xl">
-                                <motion.h1
-                                    animate={{ y: [-50, -50, 0], color: ['#FFFFFF'] }}
-                                    transition={{
-                                        duration: 4,
-                                        delay: 0,
-                                        ease: easeIn
-                                    }}
+                                <h1
                                     className="text-5xl font-bold pb-3">
                                     Professional Consultation Services
-                                </motion.h1>
-                                <motion.p
-                                    animate={{ y: [-50, -50, 0], color: ['#FFFFFF'] }}
-                                    transition={{
-                                        duration: 3,
-                                        delay: 0,
-                                        ease: easeIn
-                                    }}
+                                </h1>
+                                <p
                                     className="mb-5">
                                     Guiding you through complex decisions with professional insights. Offering strategic consultation to help you thrive in every endeavor. Providing clear, actionable advice for your business and personal growth.
-                                </motion.p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -127,26 +103,14 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-4xl">
-                                <motion.h1
-                                    animate={{ y: [-50, -50, 0], color: ['#FFFFFF'] }}
-                                    transition={{
-                                        duration: 4,
-                                        delay: 0,
-                                        ease: easeIn
-                                    }}
+                                <h1
                                     className="text-5xl font-bold pb-3">
                                     Technology & Digital Services
-                                </motion.h1>
-                                <motion.p
-                                    animate={{ y: [-50, -50, 0], color: ['#FFFFFF'] }}
-                                    transition={{
-                                        duration: 3,
-                                        delay: 0,
-                                        ease: easeIn
-                                    }}
+                                </h1>
+                                <p
                                     className="mb-5">
                                     Empowering your business with cutting-edge digital transformation. Crafting customized technology solutions that drive success. Bridging the gap between technology and your business goals.
-                                </motion.p>
+                                </p>
                             </div>
                         </div>
                     </div>
