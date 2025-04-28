@@ -23,9 +23,9 @@ const AllServices = () => {
                 <title>Services - ReviewPulse Service Website</title>
             </Helmet>
 
-            <h1 className='font-bold text-3xl text-center pb-10'>Our All Services</h1>
+            <h1 className='font-bold text-3xl text-center pb-5'>Our All Services</h1>
 
-            <div className='w-6/12 mx-auto pt-8'>
+            <div className='w-6/12 mx-auto pt-5 mb-5'>
                 <label className="input input-bordered flex items-center gap-2">
                     <input 
                         onChange={(e) => setSearchText(e.target.value)}
