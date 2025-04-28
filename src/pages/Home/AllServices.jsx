@@ -9,7 +9,7 @@ const AllServices = () => {
     const [searchText, setSearchText] = useState("");           
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services?searchParams=${searchText}`)
+        fetch(`https://assignment-11-server-eta-jade.vercel.app/services?searchParams=${searchText}`)
             .then(res => res.json())
             .then((data) => {
                 setServices(data);  
