@@ -30,4 +30,5 @@
 .ab-banner {
   background-image: url('./assets/about/ab-banner.jpg');
   background-repeat: no-repeat;
+  height: 50vh;
 }

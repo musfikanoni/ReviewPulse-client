@@ -55,10 +55,10 @@ const Reviews = () => {
                         }}
                     >
                         <SwiperSlide className='rounded-xl border'>
-                            <div className="flex flex-col justify-center my-10 items-center">
+                            <div className="flex flex-col justify-center px-3 my-10 items-center">
                                 <img className="border-2 h-4 rounded-full" src={r1} alt="" />
-                                <p className="text-xl py-3 text-black font-bold">Suzan Caika</p>
-                                <p className='md:text-base text-sm px-3 text center'>Excellent service! The team was professional, efficient, and delivered exactly what I needed. Their attention to detail and customer support were outstanding. Highly recommend!</p>
+                                <p className="text-xl py-3 text-base font-bold">Suzan Caika</p>
+                                <p className='md:text-base text-sm text center px-5'>Excellent service! The team was professional, efficient, and delivered exactly what I needed. Their attention to detail and customer support were outstanding. Highly recommend!</p>
                                 <div className="flex justify-center gap-2 mt-4">
                                     <FaStar className='text-xl text-amber-500' />
                                     <FaStar className='text-xl text-amber-500' />
@@ -71,8 +71,8 @@ const Reviews = () => {
                         <SwiperSlide className=' rounded-xl border'>
                             <div className="flex flex-col justify-center my-10 items-center">
                                 <img className="border-2 h-4 rounded-full " src={r2} alt="" />
-                                <p className="text-xl py-3 text-black font-bold">Jack Adams</p>
-                                <p className='md:text-base text-sm px-3 text center'>I had a great experience with this service. Everything was handled smoothly and on time. The quality exceeded my expectations, and the staff was very friendly. Will use again!</p>
+                                <p className="text-xl py-3 text-base font-bold">Jack Adams</p>
+                                <p className='md:text-base text-sm text center px-5'>I had a great experience with this service. Everything was handled smoothly and on time. The quality exceeded my expectations, and the staff was very friendly. Will use again!</p>
                                 <div className="flex justify-center gap-2 mt-4">
                                     <FaStar className='text-xl text-amber-500' />
                                     <FaStar className='text-xl text-amber-500' />
@@ -85,8 +85,8 @@ const Reviews = () => {
                         <SwiperSlide className='rounded-xl border'>
                             <div className="flex flex-col justify-center my-10 items-center">
                                 <img className="border-2 h-4 rounded-full" src={r3} alt="" />
-                                <p className="text-xl mt-2 mb-3 text-black font-bold">Sofia Gomez</p>
-                                <p className='md:text-base text-sm px-3 text center'>Amazing service from start to finish! They were quick to respond and provided expert solutions. The process was hassle-free, and I’m extremely satisfied with the results.</p>
+                                <p className="text-xl mt-2 mb-3 text-base font-bold">Sofia Gomez</p>
+                                <p className='md:text-base text-sm text center px-5'>Amazing service from start to finish! They were quick to respond and provided expert solutions. The process was hassle-free, and I’m extremely satisfied with the results.</p>
                                 <div className="flex justify-center gap-2 mt-4">
                                     <FaStar className='text-xl text-amber-500' />
                                     <FaStar className='text-xl text-amber-500' />
@@ -99,8 +99,8 @@ const Reviews = () => {
                         <SwiperSlide className=' rounded-xl border'>
                             <div className="flex flex-col justify-center my-10 items-center">
                                 <img className="border-2 h-4 rounded-full " src={r4} alt="" />
-                                <p className="text-xl py-3 text-black font-bold">Lorissa</p>
-                                <p className='md:text-base text-sm px-3 text center'>Fantastic experience! The team was knowledgeable and provided excellent support throughout. The service was seamless and exceeded my expectations. Will definitely return!</p>
+                                <p className="text-xl py-3 text-base font-bold">Lorissa</p>
+                                <p className='md:text-base text-sm text center px-5'>Fantastic experience! The team was knowledgeable and provided excellent support throughout. The service was seamless and exceeded my expectations. Will definitely return!</p>
                                 <div className="flex justify-center gap-2 mt-4">
                                     <FaStar className='text-xl text-amber-500' />
                                     <FaStar className='text-xl text-amber-500' />
@@ -113,8 +113,8 @@ const Reviews = () => {
                         <SwiperSlide className='rounded-xl border'>
                             <div className="flex flex-col justify-center my-10 items-center">
                                 <img className="border-2 h-4 rounded-full" src={r1} alt="" />
-                                <p className="text-xl py-3 text-black font-bold">Olivia</p>
-                                <p className='md:text-base text-sm px-3 text center'>Reliable and efficient service! They listened to my requirements and delivered perfectly. I appreciate their dedication to customer satisfaction. Would recommend to anyone!</p>
+                                <p className="text-xl py-3 text-base font-bold">Olivia</p>
+                                <p className='md:text-base text-sm text center px-5'>Reliable and efficient service! They listened to my requirements and delivered perfectly. I appreciate their dedication to customer satisfaction. Would recommend to anyone!</p>
                                 <div className="flex justify-center gap-2 mt-4">
                                     <FaStar className='text-xl text-amber-500' />
                                     <FaStar className='text-xl text-amber-500' />
@@ -127,8 +127,8 @@ const Reviews = () => {
                         <SwiperSlide className=' rounded-xl border'>
                             <div className="flex flex-col justify-center my-10 items-center">
                                 <img className="border-2 h-4 rounded-full " src={r2} alt="" />
-                                <p className="text-xl py-3 text-black font-bold">Zayn Malik</p>
-                                <p className='md:text-base text-sm px-3 text center'>Fantastic experience! The team was knowledgeable and provided excellent support throughout. The service was seamless and exceeded my expectations. Will definitely return!</p>
+                                <p className="text-xl py-3 text-base font-bold">Zayn Malik</p>
+                                <p className='md:text-base text-sm text center px-5'>Fantastic experience! The team was knowledgeable and provided excellent support throughout. The service was seamless and exceeded my expectations. Will definitely return!</p>
                                 <div className="flex justify-center gap-2 mt-4">
                                     <FaStar className='text-xl text-amber-500' />
                                     <FaStar className='text-xl text-amber-500' />
