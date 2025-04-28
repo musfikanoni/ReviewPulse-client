@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, ScrollRestoration } from 'react-router-dom';
 import quality from '../../assets/about/quality.png';
 import support from '../../assets/about/support.png';
 import coming from '../../assets/about/upcomming.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AboutUs = () => {
+
+        useEffect(() => {
+            AOS.init({
+              duration: 1000, 
+              once: true,
+            });
+          }, []);
+
     return (
         <div>
             <ScrollRestoration />
             <div
-                className="hero lg:h-[85vh] md:h-[50vh] h-100vh ab-banner">
+                className="hero lg:h-[80vh] md:h-[40vh] h-100vh ab-banner">
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-neutral-content text-center">
-                    <div className="max-w-md">
+                    <div className="max-w-md"
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1000">
                     <h1 className="mb-5 text-5xl font-bold">About Us</h1>
                     <p className="mb-5">
                     Welcome to ReviewPlus, your trusted partner for high-quality and reliable services. We are dedicated to providing top-notch solutions tailored to meet your unique needs. 

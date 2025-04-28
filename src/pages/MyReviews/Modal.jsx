@@ -48,7 +48,7 @@ const Modal = ({ review, onClose, onUpdate }) => {
 
     return (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 overflow-y-scroll">
-            <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-6/12">
+            <div className="bg- rounded-lg shadow-lg w-11/12 md:w-6/12">
                 <div className="card bg-base-100 w-full max-w-3xl">
                     <form onSubmit={handleUpdateReview} className="card-body">
                         <h3 className="font-bold text-lg">Update Your Review</h3>
@@ -114,10 +114,10 @@ const Modal = ({ review, onClose, onUpdate }) => {
                         </div>
                         <div className="form-control mt-6">
                             <div className="flex justify-center gap-4">
-                                <button type="button" onClick={onClose} className="btn lg:btn-wide">
+                                <button type="button" onClick={onClose} className="btn lg:btn-wide  px-5 py-2.5 rounded-full font-semibold">
                                     Cancel
                                 </button>
-                                <button type="submit" className="btn lg:btn-wide btn-primary">
+                                <button type="submit" className="btn lg:btn-wide px-5 py-2.5 rounded-full font-semibold bg-gradient-to-r from-[#a233ce] via-[#b60bffd2] to-[#936dfa] border-none text-white">
                                     Update
                                 </button>
                             </div>

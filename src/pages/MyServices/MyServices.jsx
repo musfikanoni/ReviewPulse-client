@@ -144,8 +144,8 @@ const Modal = ({ service, onClose, onUpdate }) => {
                             </div>
                         </div>
                         <div className="flex justify-center pt-3 gap-4">
-                            <button onClick={onClose} className="btn lg:btn-wide">Cancel</button>
-                            <button className="btn lg:btn-wide btn-primary">Update</button>
+                            <button onClick={onClose} className="btn lg:btn-wide px-5 py-2.5 rounded-full font-semibold">Cancel</button>
+                            <button className="btn lg:btn-wide px-5 py-2.5 rounded-full font-semibold bg-gradient-to-r from-[#a233ce] via-[#b60bffd2] to-[#936dfa] border-none text-white">Update</button>
                         </div>
                     </form>
                 </div>
