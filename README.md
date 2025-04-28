@@ -1,6 +1,6 @@
 # 🎥 ReviewPluse
 
-![](https://i.ibb.co.com/qMHHFjxC/Screenshot-307.png)
+![](https://i.ibb.co.com/rKWRLpmT/Screenshot-307.png)
 
 **ReviewPluse** is a full-stack web application that allows users to browse, review, and manage movies. With authentication, dynamic content, and sleek UI components, this platform is perfect for movie enthusiasts to share and explore opinions.
 
@@ -25,10 +25,8 @@ Built with modern tools and technologies, this project aims to provide a rich us
 ## ✨ Features
 
 - 🔐 **Authentication System** (Login/Register using Firebase)
-- 📝 **CRUD Operations** for movies and reviews
+- 📝 **CRUD Operations** for services and reviews
 - 🌙 **Dark/Light Mode** (DaisyUI integrated)
-- ❤️ **Add to Favorites** functionality
-- 🧾 **User Dashboard** for managing personal activity
 - 🧠 **Dynamic Data Fetching** using REST APIs
 - 🔄 **Responsive UI** with TailwindCSS and DaisyUI
 - 📦 **Server-side Routing & API** with Express.js and MongoDB
@@ -50,7 +48,7 @@ Built with modern tools and technologies, this project aims to provide a rich us
 
 **Deployment:**
 - Netlify (Frontend)
-- Render / Vercel / Railway (Backend – specify as needed)
+- Vercel (Backend – specify as needed)
 
 ---
 
